@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Arthur的个人作品集，展示Web开发、设计作品" />
+    <meta name="keywords" content="Web开发, 前端开发, UI设计, React, JavaScript" />
+    <meta name="author" content="Arthur" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Arthur's Portfolio" />
+    <meta property="og:description" content="专注于Web开发与设计的个人作品集" />
+    <meta property="og:image" content="path/to/thumbnail.jpg" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Arthur's Portfolio" />
+    <meta name="twitter:description" content="专注于Web开发与设计的个人作品集" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="/myblog/favicon.ico" />
+    <link rel="stylesheet" href="/myblog/style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Arthur's Blog - Personal Portfolio</title>
+  </head>
+  <body>
+    <div class="mask"></div>
+
+    <header class="header">
+      <a href="#" class="logo">Mr.Nobody</a>
+      
+      <div class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+
+      <nav class="navbar">
+        <a href="#" class="active item" style="--i: 1">Home</a>
+        <a href="#about" class="item" style="--i: 2">About</a>
+        <a href="#skills" class="item" style="--i: 3">Skills</a>
+        <a href="#portfolio" class="item" style="--i: 4">Products</a>
+        <a href="/myblog/contact.html" class="item" style="--i: 5">Contact</a>
+      </nav>
+    </header>
+
+    <section class="home section" id="home">
+      <div class="home-content">
+        <h3>你好，我是</h3>
+        <h1>Arthur</h1>
+        <h3>我是一名 <span class="multiple-text"></span></h3>
+        <p>
+          热爱前沿技术，追求创新。专注于Web开发、人工智能和创意设计。
+          始终保持学习的激情，努力成为更好的自己。
+          欢迎来到我的个人空间，让我们一起探索技术的无限可能。
+        </p>
+        <div class="social-media">
+          <a href="#" style="--i: 7" title="TikTok"><i class="bx bxl-tiktok"></i></a>
+          <a href="#" style="--i: 8" title="YouTube"><i class="bx bxl-youtube"></i></a>
+          <a href="#" style="--i: 9" title="Email"><i class="bx bxl-gmail"></i></a>
+          <a href="#" style="--i: 10" title="Twitter"><i class="bx bxl-twitter"></i></a>
+          <a href="#" style="--i: 11" title="GitHub"><i class="bx bxl-github"></i></a>
+        </div>
+        <div class="btn-group">
+          <a href="#portfolio" class="btn">查看作品</a>
+          <a href="/myblog/contact.html" class="btn btn-outline">联系我</a>
+        </div>
+      </div>
+      <div class="home-img">
+        <img src="/myblog/iron.jpg" alt="Iron Man" />
+      </div>
+    </section>
+
+    <section class="about section section-hidden" id="about">
+      <h2 class="heading">关于 <span>我</span></h2>
+      <div class="about-content">
+        <div class="about-img">
+          <img src="/myblog/curry.png" alt="Profile">
+          <div class="about-social">
+            <a href="#" title="GitHub"><i class='bx bxl-github'></i></a>
+            <a href="#" title="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+            <a href="#" title="Twitter"><i class='bx bxl-twitter'></i></a>
+          </div>
+        </div>
+        
+        <div class="about-details">
+          <div class="about-text">
+            <h3>技术探索者 & 创意开发者</h3>
+            <p>热爱编程，专注于前端开发和创意设计。我相信技术不仅仅是工具，更是实现梦想的桥梁。在过去的经历中，我参与过多个创新项目的开发，包括...</p>
+          </div>
+
+          <div class="about-info">
+            <div class="info-box">
+              <i class='bx bx-award'></i>
+              <h4>经验</h4>
+              <p>3+ 年开发经验</p>
+            </div>
+            <div class="info-box">
+              <i class='bx bx-code-alt'></i>
+              <h4>项目</h4>
+              <p>20+ 完成项目</p>
+            </div>
+            <div class="info-box">
+              <i class='bx bx-coffee'></i>
+              <h4>咖啡</h4>
+              <p>1000+ 杯</p>
+            </div>
+          </div>
+
+          <div class="about-interests">
+            <h3>兴趣爱好</h3>
+            <div class="interests-list">
+                <div class="interest-item">
+                    <span class="interest-icon"><i class='bx bx-basketball'></i></span>
+                    <div class="interest-content">
+                        <h4>篮球</h4>
+                        <p>热爱篮球运动，库里铁粉</p>
+                    </div>
+                </div>
+                <div class="interest-item">
+                    <span class="interest-icon"><i class='bx bx-camera'></i></span>
+                    <div class="interest-content">
+                        <h4>摄影</h4>
+                        <p>记录生活的好瞬间</p>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="about-buttons">
+            <a href="#" class="btn">下载简历 <i class='bx bx-download'></i></a>
+            <a href="/myblog/contact.html" class="btn btn-outline">联系我 <i class='bx bx-send'></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="skills section section-hidden" id="skills">
+        <h2 class="heading">我的 <span>技能</span></h2>
+        
+        <div class="skills-container">
+            <div class="skills-box">
+                <div class="skills-content">
+                    <div class="progress">
+                        <h3>Web Development <span>90%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>JavaScript <span>85%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>React <span>80%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>Node.js <span>75%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-box">
+                <div class="skills-content">
+                    <div class="progress">
+                        <h3>UI/UX Design <span>85%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>Python <span>80%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>Database <span>75%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+
+                    <div class="progress">
+                        <h3>DevOps <span>70%</span></h3>
+                        <div class="bar"><span></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portfolio section section-hidden" id="portfolio">
+      <h2 class="heading">我的 <span>作品</span></h2>
+      <div class="portfolio-container">
+        <div class="portfolio-box">
+          <img src="/myblog/i-ui-yf0118-1-04.jpg" alt="Project 1">
+          <div class="portfolio-layer">
+            <h4>Web Design</h4>
+            <p>项目描述放在这里</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="/myblog/d96daab9gy1gre3dq591cj21400u0k4r.jpg" alt="Project 2">
+          <div class="portfolio-layer">
+            <h4>移动应用开发</h4>
+            <p>项目描述...</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+        <div class="portfolio-box">
+          <img src="/myblog/d96daab9gy1gre3dr5775j21400u0gpx.jpg" alt="Project 3">
+          <div class="portfolio-layer">
+            <h4>UI/UX 设计</h4>
+            <p>项目描述...</p>
+            <a href="#"><i class='bx bx-link-external'></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 by Arthur | All Rights Reserved.</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.132/dist/typed.umd.js"></script>
+    <script src="/myblog/script.js"></script>
+    <script src="/myblog/effects.js"></script>
+    <script src="/myblog/js/protection.js"></script>
+  </body>
+</html>

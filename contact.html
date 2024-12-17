@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="/myblog/style.css" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <title>联系我 - Arthur's Blog</title>
+  </head>
+  <body>
+    <div class="mask"></div>
+
+    <header class="header">
+      <a href="#" class="logo">Mr.Nobody</a>
+      <nav class="navbar">
+        <a href="../index.html" class="item" style="--i: 1">Home</a>
+        <a href="index.html#about" class="item" style="--i: 2">About</a>
+        <a href="index.html#skills" class="item" style="--i: 3">Skills</a>
+        <a href="index.html#portfolio" class="item" style="--i: 4">Products</a>
+        <a href="#" class="active item" style="--i: 5">Contact</a>
+      </nav>
+    </header>
+
+    <section class="contact-page">
+      <div class="contact-header">
+        <h2 class="heading">让我们 <span>聊聊</span></h2>
+        <p class="subtitle">有任何问题或合作意向？随时联系我</p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="card-icon">
+              <i class='bx bx-current-location'></i>
+            </div>
+            <div class="card-content">
+              <h3>位置</h3>
+              <p>中国，山东省</p>
+              <p>济宁市</p>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="card-icon">
+              <i class='bx bx-envelope'></i>
+            </div>
+            <div class="card-content">
+              <h3>邮箱</h3>
+              <p>contact@example.com</p>
+              <a href="mailto:contact@example.com" class="contact-link">发送邮件</a>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="card-icon">
+              <i class='bx bx-phone-call'></i>
+            </div>
+            <div class="card-content">
+              <h3>电话</h3>
+              <p>+86 xxx xxxx xxxx</p>
+              <a href="tel:+86xxxxxxxx" class="contact-link">立即通话</a>
+            </div>
+          </div>
+
+          <div class="social-connect">
+            <h3>社交媒体</h3>
+            <div class="social-links">
+              <a href="#" class="social-btn github">
+                <i class='bx bxl-github'></i>
+                <span>GitHub</span>
+              </a>
+              <a href="#" class="social-btn tiktok">
+                <i class='bx bxl-tiktok'></i>
+                <span>TikTok</span>
+              </a>
+              <a href="#" class="social-btn twitter">
+                <i class='bx bxl-twitter'></i>
+                <span>Twitter</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-container">
+          <form id="contactForm" class="contact-form">
+            <h3>发送消息</h3>
+            <div class="form-group">
+              <div class="input-field">
+                <input type="text" id="name" required>
+                <label for="name">您的姓名</label>
+                <i class='bx bx-user'></i>
+              </div>
+              <div class="input-field">
+                <input type="email" id="email" required>
+                <label for="email">电子邮箱</label>
+                <i class='bx bx-envelope'></i>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="input-field">
+                <input type="tel" id="phone" required>
+                <label for="phone">联系电话</label>
+                <i class='bx bx-phone'></i>
+              </div>
+              <div class="input-field">
+                <input type="text" id="subject" required>
+                <label for="subject">主题</label>
+                <i class='bx bx-notepad'></i>
+              </div>
+            </div>
+
+            <div class="form-group full">
+              <div class="input-field">
+                <textarea id="message" rows="6" required></textarea>
+                <label for="message">您的留言</label>
+                <i class='bx bx-message-dots'></i>
+              </div>
+            </div>
+
+            <button type="submit" class="submit-btn">
+              <span>发送消息</span>
+              <i class='bx bx-send'></i>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="map-section">
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1234.5678!2d..." 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-text">
+        <p>Copyright &copy; 2024 by Arthur | All Rights Reserved.</p>
+      </div>
+      <div class="footer-iconTop">
+        <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
+      </div>
+    </footer>
+
+    <script>
+      const contactForm = document.getElementById('contactForm');
+      const inputs = document.querySelectorAll('.input-field input, .input-field textarea');
+
+      // 表单提交处理
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // 简单的表单验证
+        let isValid = true;
+        inputs.forEach(input => {
+          if (!input.value.trim()) {
+            isValid = false;
+            input.parentElement.classList.add('error');
+          } else {
+            input.parentElement.classList.remove('error');
+          }
+        });
+
+        if (isValid) {
+          // 这里添加表单提交逻辑
+          alert('消息已发送！');
+          this.reset();
+          inputs.forEach(input => {
+            input.parentElement.classList.remove('active');
+          });
+        }
+      });
+
+      // 输入框动画
+      inputs.forEach(input => {
+        input.addEventListener('focus', () => {
+          input.parentElement.classList.add('active');
+          input.parentElement.classList.remove('error');
+        });
+
+        input.addEventListener('blur', () => {
+          if (!input.value) {
+            input.parentElement.classList.remove('active');
+          }
+        });
+
+        // 如果输入框已有内容，保持激活状态
+        if (input.value) {
+          input.parentElement.classList.add('active');
+        }
+      });
+
+      // 添加页面跳转效果
+      const mask = document.querySelector('.mask');
+      const links = document.querySelectorAll('a[href]:not([href^="#"]):not([href^="mailto:"]):not([href^="tel:"])');
+
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const href = this.getAttribute('href');
+          
+          mask.classList.add('active');
+          
+          setTimeout(() => {
+            window.location.href = href;
+          }, 500);
+        });
+      });
+
+      // 页面加载时的动画
+      window.addEventListener('load', () => {
+        mask.classList.add('loaded');
+      });
+
+      // 添加粒子效果
+      function createParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        // 随机位置
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        
+        particle.style.left = x + 'px';
+        particle.style.top = y + 'px';
+        
+        document.body.appendChild(particle);
+        
+        // 随机动画
+        const animation = particle.animate([
+          {
+            transform: `translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px)`,
+            opacity: 0
+          }
+        ], {
+          duration: Math.random() * 3000 + 2000,
+          easing: 'cubic-bezier(0,0.2,1,1)'
+        });
+        
+        animation.onfinish = () => {
+          particle.remove();
+        };
+      }
+
+      // 定期创建粒子
+      setInterval(createParticle, 300);
+
+      // 添加鼠标移动粒子效果
+      document.addEventListener('mousemove', (e) => {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        particle.style.left = e.clientX + 'px';
+        particle.style.top = e.clientY + 'px';
+        
+        document.body.appendChild(particle);
+        
+        const animation = particle.animate([
+          {
+            transform: 'scale(1)',
+            opacity: 1
+          },
+          {
+            transform: 'scale(0)',
+            opacity: 0
+          }
+        ], {
+          duration: 1000,
+          easing: 'cubic-bezier(0,0.2,1,1)'
+        });
+        
+        animation.onfinish = () => {
+          particle.remove();
+        };
+      });
+
+      // 为表单添加提交动画
+      contactForm.addEventListener('submit', function(e) {
+        if (isValid) {
+          const btn = this.querySelector('.submit-btn');
+          btn.innerHTML = '<i class="bx bx-check"></i> 发送成功！';
+          btn.style.background = '#00ff88';
+          
+          setTimeout(() => {
+            btn.innerHTML = '<span>发送消息</span><i class="bx bx-send"></i>';
+            btn.style.background = '';
+          }, 2000);
+        }
+      });
+
+      // 3D 卡片效果
+      document.querySelectorAll('.info-card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+          
+          const rotateX = (y - centerY) / 10;
+          const rotateY = -(x - centerX) / 10;
+          
+          card.style.transform = `
+            perspective(1000px)
+            rotateX(${rotateX}deg)
+            rotateY(${rotateY}deg)
+            translateZ(10px)
+          `;
+        });
+        
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
+    </script>
+  </body>
+</html> 
